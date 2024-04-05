@@ -8,8 +8,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: linear-gradient(to bottom right, #4c77b7, #6497cc);
-            position: relative;
+            background-image: url('background.jpg'); /* Dodanie obrazu JPG jako tła */
+            background-size: cover; /* Zapewnienie, że obraz będzie wypełniał całe tło */
+            background-position: center; /* Wyśrodkowanie obrazu na tle */
         }
         .container {
             max-width: 80%;
@@ -70,7 +71,7 @@
     </style>
 </head>
 <body>
-    <div class="beta-tag">BETA</div> <!-- Dodany element HTML dla napisu BETA -->
+    <div class="beta-tag">BETA</div>
     <div class="container">
         <h1>Wyszukiwarka Miasta</h1>
         <div>
