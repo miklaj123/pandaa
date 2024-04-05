@@ -2,83 +2,73 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Przetwarzanie danych z pliku CSV</title>
+    <title>Wyszukiwanie w danych CSV</title>
     <style>
-        /* Twoje style */
+        /* Stylizacja */
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Przetwarzanie danych z pliku CSV</h1>
+    <h1>Wyszukiwanie danych</h1>
     <div>
-        <input type="text" id="searchInput" placeholder="Wpisz zapytanie">
-        <button onclick="searchInCsv()">Wyszukaj</button>
+        <input type="text" id="searchInput" placeholder="Szukaj...">
+        <button onclick="searchInCsv()">Szukaj</button>
     </div>
-    <div id="results"></div>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Miasto</th>
+                <th>Adres</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+        </tbody>
+    </table>
 </div>
 
 <script>
 function searchInCsv() {
-    const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
     if (!searchQuery) {
-        document.getElementById('results').innerText = 'Proszę wpisać zapytanie wyszukiwania.';
+        alert('Wpisz szukaną frazę.');
         return;
     }
 
     fetch('Pandabuy-Email.csv')
         .then(response => response.text())
-        .then(csvText => {
-            const lines = csvText.split('\n');
-            const matchingLines = lines.filter(line => {
-                const columns = line.split(',');
-                // Sprawdzanie zgodności każdej kolumny z zapytaniem
-                if (columns[2].toLowerCase().includes(searchQuery)) {
-                    return true; // Kolumna 3 zawiera email
-                }
-                if (columns[3].toLowerCase().includes(searchQuery)) {
-                    return true; // Kolumna 4 zawiera IP
-                }
-                if (columns[10].includes(searchQuery)) {
-                    return true; // Kolumna 11 zawiera telefon
-                }
-                return false;
-            });
-            displayResults(matchingLines);
+        .then(text => {
+            const lines = text.split('\n');
+            const results = lines.filter(line => line.toLowerCase().includes(searchQuery));
+            displayResults(results);
         })
         .catch(error => {
             console.error('Błąd:', error);
-            document.getElementById('results').innerText = 'Wystąpił błąd podczas ładowania danych.';
         });
 }
 
 function displayResults(results) {
-    const resultsContainer = document.getElementById('results');
-    if (results.length === 0) {
-        resultsContainer.innerText = 'Nie znaleziono wyników.';
-        return;
-    }
+    const resultsBody = document.getElementById('resultsBody');
+    resultsBody.innerHTML = ''; // Czyszczenie wyników
 
-    // Utwórz tabelę wyników
-    const table = document.createElement('table');
-    const headerRow = document.createElement('tr');
-    headerRow.innerHTML = '<th>Email</th><th>IP</th><th>Telefon</th>';
-    table.appendChild(headerRow);
-
-    // Dodaj wiersze wyników
-    results.forEach(line => {
-        const columns = line.split(',');
+    results.forEach(result => {
+        const columns = result.split(',');
         const row = document.createElement('tr');
-        [2, 3, 10].forEach(index => {
-            const cell = document.createElement('td');
-            cell.textContent = columns[index];
-            row.appendChild(cell);
-        });
-        table.appendChild(row);
+        row.innerHTML = `
+            <td>${columns[2]}</td>
+            <td>${columns[3]}</td>
+            <td>${columns[7]}</td>
+            <td>${columns[8]}</td>
+            <td>${columns[10]}</td>
+        `;
+        resultsBody.appendChild(row);
     });
 
-    // Wyświetl tabelę wyników
-    resultsContainer.innerHTML = '';
-    resultsContainer.appendChild(table);
+    if (results.length === 0) {
+        resultsBody.innerHTML = '<tr><td colspan="5">Brak wyników</td></tr>';
+    }
 }
 </script>
 </body>
