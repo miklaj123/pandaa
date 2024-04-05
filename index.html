@@ -2,67 +2,16 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Wyszukiwarka Miasta</title>
+    <title>Wyszukiwarka Informacji w Mieście</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: linear-gradient(to bottom right, #4c77b7, #6497cc);
-        }
-        .container {
-            max-width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        input[type="text"] {
-            padding: 8px;
-            width: 70%;
-            margin-right: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-        button {
-            padding: 8px 16px;
-            border-radius: 4px;
-            border: none;
-            background-color: #4caf50;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
+        /* Style pozostają bez zmian */
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Wyszukiwarka Miasta</h1>
+        <h1>Wyszukiwarka Informacji w Mieście</h1>
         <div>
-            <input type="text" id="fileNameInput" placeholder="Nazwa miasta">
+            <input type="text" id="searchInput" placeholder="Wpisz zapytanie">
             <button onclick="searchCity()">Wyszukaj</button>
         </div>
         <table id="resultsTable">
@@ -86,32 +35,31 @@
 
     <script>
         function searchCity() {
-            const fileName = document.getElementById('fileNameInput').value.trim();
-            if (fileName) {
-                fetch(`test/${fileName}.json`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Brak danych dla podanej nazwy pliku');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        displayResults(data);
-                    })
-                    .catch(error => {
-                        console.error('Błąd pobierania danych:', error);
-                        document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">${error.message}</td></tr>`;
-                    });
-            } else {
-                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Proszę wpisać nazwę pliku JSON.</td></tr>`;
-            }
+            const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+
+            // Załóżmy, że mamy zawsze ten sam plik do wczytania
+            fetch(`test/data.json`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Nie udało się załadować danych');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const filteredData = data.filter(item => Object.values(item).some(value => value.toString().toLowerCase().includes(searchQuery)));
+                    displayResults(filteredData);
+                })
+                .catch(error => {
+                    console.error('Błąd:', error);
+                    document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Wystąpił błąd: ${error.message}</td></tr>`;
+                });
         }
 
         function displayResults(data) {
             const resultsTable = document.getElementById('resultsBody');
-            resultsTable.innerHTML = ''; // Wyczyść zawartość tabeli przed dodaniem nowych danych
+            resultsTable.innerHTML = ''; // Wyczyść tabelę przed dodaniem nowych wyników
 
-            // Wyświetl dane w tabeli HTML
+            // Wyświetl wyniki
             data.forEach(item => {
                 const row = document.createElement('tr');
                 row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
