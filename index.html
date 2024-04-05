@@ -2,14 +2,14 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Wyszukiwarka w Pliku CSV</title>
+    <title>Przetwarzanie danych z pliku CSV</title>
     <style>
         /* Twoje style */
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Wyszukiwarka Pandabuy Email</h1>
+    <h1>Przetwarzanie danych z pliku CSV</h1>
     <div>
         <input type="text" id="searchInput" placeholder="Wpisz zapytanie">
         <button onclick="searchInCsv()">Wyszukaj</button>
@@ -29,7 +29,28 @@ function searchInCsv() {
         .then(response => response.text())
         .then(csvText => {
             const lines = csvText.split('\n');
-            const matchingLines = lines.filter(line => line.toLowerCase().includes(searchQuery));
+            const matchingLines = lines.filter(line => {
+                const columns = line.split(',');
+                // Sprawdzanie zgodności każdej kolumny z zapytaniem
+                for (let i = 0; i < columns.length; i++) {
+                    if (i === 2 && columns[i].toLowerCase().includes(searchQuery)) {
+                        return true; // Kolumna 3 zawiera email
+                    }
+                    if (i === 3 && columns[i].toLowerCase().includes(searchQuery)) {
+                        return true; // Kolumna 4 zawiera IP
+                    }
+                    if (i === 5 && columns[i].toLowerCase().includes(searchQuery)) {
+                        return true; // Kolumna 6 zawiera miejsce
+                    }
+                    if ((i === 8 || i === 9) && columns[i].toLowerCase().includes(searchQuery)) {
+                        return true; // Kolumny 9 i 10 zawierają miejsce
+                    }
+                    if (i === 10 && columns[i].includes(searchQuery)) {
+                        return true; // Kolumna 11 zawiera telefon
+                    }
+                }
+                return false;
+            });
             displayResults(matchingLines);
         })
         .catch(error => {
