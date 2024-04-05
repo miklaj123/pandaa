@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyszukiwarka Miasta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to bottom right, #4c77b7, #6497cc);
+        }
+        .container {
+            max-width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 70%;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wyszukiwarka Miasta</h1>
+        <div>
+            <input type="text" id="fileNameInput" placeholder="Nazwa pliku JSON">
+            <button onclick="searchCity()">Wyszukaj</button>
+        </div>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Numer Telefonu</th>
+                    <th>Ulica</th>
+                    <th>Miasto</th>
+                    <th>Województwo</th>
+                    <th>Kraj</th>
+                    <th>Adres Pocztowy</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <!-- Tutaj będą wyświetlane wyniki -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function searchCity() {
+            const fileName = document.getElementById('fileNameInput').value.trim();
+            if (fileName) {
+                fetch(`${fileName}.json`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Brak danych dla podanej nazwy pliku');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        displayResults(data);
+                    })
+                    .catch(error => {
+                        console.error('Błąd pobierania danych:', error);
+                        document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">${error.message}</td></tr>`;
+                    });
+            } else {
+                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Proszę wpisać nazwę pliku JSON.</td></tr>`;
+            }
+        }
+
+        function displayResults(data) {
+            const resultsTable = document.getElementById('resultsBody');
+            resultsTable.innerHTML = ''; // Wyczyść zawartość tabeli przed dodaniem nowych danych
+
+            // Wyświetl dane w tabeli HTML
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                resultsTable.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
