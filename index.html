@@ -2,70 +2,50 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Wyszukiwarka Informacji w Mieście</title>
+    <title>Wyszukiwarka w Pliku CSV</title>
     <style>
-        /* Style pozostają bez zmian */
+        /* Twoje style */
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Wyszukiwarka Informacji w Mieście</h1>
-        <div>
-            <input type="text" id="searchInput" placeholder="Wpisz zapytanie">
-            <button onclick="searchCity()">Wyszukaj</button>
-        </div>
-        <table id="resultsTable">
-            <thead>
-                <tr>
-                    <th>Imię</th>
-                    <th>Nazwisko</th>
-                    <th>Numer Telefonu</th>
-                    <th>Ulica</th>
-                    <th>Miasto</th>
-                    <th>Województwo</th>
-                    <th>Kraj</th>
-                    <th>Adres Pocztowy</th>
-                </tr>
-            </thead>
-            <tbody id="resultsBody">
-                <!-- Tutaj będą wyświetlane wyniki -->
-            </tbody>
-        </table>
+<div class="container">
+    <h1>Wyszukiwarka Pandabuy Email</h1>
+    <div>
+        <input type="text" id="searchInput" placeholder="Wpisz zapytanie">
+        <button onclick="searchInCsv()">Wyszukaj</button>
     </div>
+    <div id="results"></div>
+</div>
 
-    <script>
-        function searchCity() {
-            const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+<script>
+function searchInCsv() {
+    const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+    if (!searchQuery) {
+        document.getElementById('results').innerText = 'Proszę wpisać zapytanie wyszukiwania.';
+        return;
+    }
 
-            // Załóżmy, że mamy zawsze ten sam plik do wczytania
-            fetch(`test/data.json`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Nie udało się załadować danych');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const filteredData = data.filter(item => Object.values(item).some(value => value.toString().toLowerCase().includes(searchQuery)));
-                    displayResults(filteredData);
-                })
-                .catch(error => {
-                    console.error('Błąd:', error);
-                    document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Wystąpił błąd: ${error.message}</td></tr>`;
-                });
-        }
+    fetch('Pandabuy-Email.csv')
+        .then(response => response.text())
+        .then(csvText => {
+            const lines = csvText.split('\n');
+            const matchingLines = lines.filter(line => line.toLowerCase().includes(searchQuery));
+            displayResults(matchingLines);
+        })
+        .catch(error => {
+            console.error('Błąd:', error);
+            document.getElementById('results').innerText = 'Wystąpił błąd podczas ładowania danych.';
+        });
+}
 
-        function displayResults(data) {
-            const resultsTable = document.getElementById('resultsBody');
-            resultsTable.innerHTML = ''; // Wyczyść tabelę przed dodaniem nowych wyników
-
-            // Wyświetl wyniki
-            data.forEach(item => {
-                const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
-                resultsTable.appendChild(row);
-            });
-        }
-    </script>
+function displayResults(results) {
+    const resultsContainer = document.getElementById('results');
+    if (results.length === 0) {
+        resultsContainer.innerText = 'Nie znaleziono wyników.';
+        return;
+    }
+    resultsContainer.innerHTML = '<ul>' + results.map(result => `<li>${result}</li>`).join('') + '</ul>';
+}
+</script>
 </body>
 </html>
