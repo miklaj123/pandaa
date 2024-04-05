@@ -73,7 +73,6 @@
                     <th>Numer Telefonu</th>
                     <th>Ulica</th>
                     <th>Miasto</th>
-                    <th>Województwo</th>
                     <th>Kraj</th>
                     <th>Adres Pocztowy</th>
                 </tr>
@@ -88,7 +87,7 @@
         function searchCity() {
             const cityName = document.getElementById('fileNameInput').value.trim().toLowerCase();
             if (!cityName) {
-                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Proszę wpisać nazwę miasta.</td></tr>`;
+                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="7">Proszę wpisać nazwę miasta.</td></tr>`;
                 return;
             }
 
@@ -110,40 +109,47 @@
                 'WEST POMERANIAN VOIVODESHIP'
             ];
 
-            document.getElementById('resultsBody').innerHTML = ''; // Wyczyść tabelę przed wyszukiwaniem
+            let noDataForVoivodeships = [];
 
             voivodeships.forEach(voivodeship => {
                 const filePath = `test/${voivodeship}/${cityName}.json`;
                 fetch(filePath)
                     .then(response => {
                         if (!response.ok) {
-                            throw new Error(`Brak danych dla województwa: ${voivodeship}`);
+                            throw new Error(`Brak danych dla: ${voivodeship}`);
                         }
                         return response.json();
                     })
                     .then(data => {
-                        displayResults(data, voivodeship);
+                        displayResults(data);
                     })
                     .catch(error => {
-                        displayNoData(voivodeship); // Wywołanie funkcji informującej o braku danych
+                        noDataForVoivodeships.push(voivodeship.replace(/-/g, ' ')); // Usuwamy myślniki dla lepszej czytelności
+                    })
+                    .finally(() => {
+                        if (noDataForVoivodeships.length === voivodeships.length) {
+                            displayNoData(noDataForVoivodeships);
+                        }
                     });
             });
         }
 
-        function displayResults(data, voivodeship) {
+        function displayResults(data) {
             const resultsTable = document.getElementById('resultsBody');
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${voivodeship}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
                 resultsTable.appendChild(row);
             });
         }
 
-        function displayNoData(voivodeship) {
-            const resultsTable = document.getElementById('resultsBody');
-            const row = document.createElement('tr');
-            row.innerHTML = `<td colspan="8">Brak danych dla województwa: ${voivodeship}</td>`;
-            resultsTable.appendChild(row);
+        function displayNoData(noDataForVoivodeships) {
+            if (noDataForVoivodeships.length > 0) {
+                const resultsTable = document.getElementById('resultsBody');
+                const row = document.createElement('tr');
+                row.innerHTML = `<td colspan="7">Brak danych dla większości województw.</td>`;
+                resultsTable.appendChild(row);
+            }
         }
     </script>
 </body>
