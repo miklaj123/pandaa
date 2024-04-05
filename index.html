@@ -19,6 +19,7 @@
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative; /* Dodajemy pozycję względną, aby móc pozycjonować rozwijalną listę */
         }
         h1 {
             text-align: center;
@@ -68,11 +69,56 @@
             border-radius: 4px;
             font-size: 12px;
         }
+        .updates-dropdown {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #d6211b;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .updates-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #15beb6;
+            min-width: 160px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .updates-dropdown:hover .updates-dropdown-content {
+            display: block;
+        }
+        .updates-dropdown-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .updates-dropdown-content ul li {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .updates-dropdown span {
+            color: blue;
+        }
+        .updates-dropdown-content ul li:hover {
+            background-color: #1f969e;
+        }
     </style>
 </head>
 <body>
     <div class="beta-tag">BETA</div>
     <div class="container">
+        <div class="updates-dropdown">
+            Aktualizacje
+            <div class="updates-dropdown-content">
+                <ul>
+                    <li>Tło</li>
+                    <li>Ulice</li>
+                    <li>Lista aktualizacji</li>
+                </ul>
+            </div>
+        </div>
         <h1>Wyszukiwarka Miasta</h1>
         <div>
             <input type="text" id="fileNameInput" placeholder="Nazwa miasta">
@@ -85,6 +131,7 @@
                     <th>Nazwisko</th>
                     <th>Numer Telefonu</th>
                     <th>Miasto</th>
+                    <th>Ulica</th> <!-- Kolumna Ulica pojawi się tutaj -->
                     <th>Kraj</th>
                     <th>Adres Pocztowy</th>
                 </tr>
@@ -99,10 +146,10 @@
         function searchCity() {
             const cityName = document.getElementById('fileNameInput').value.trim().toLowerCase();
             if (!cityName) {
-                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="6">Proszę wpisać nazwę miasta.</td></tr>`;
+                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="7">Proszę wpisać nazwę miasta.</td></tr>`;
                 return;
             }
-            
+
             clearResultsTable();
 
             const voivodeships = [
@@ -152,7 +199,7 @@
             const resultsTable = document.getElementById('resultsBody');
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie || 'Brak'}</td><td>${item.Nazwisko || 'Brak'}</td><td>${item['Nr.Telefonu'] || 'Brak'}</td><td>${item.Miasto || 'Brak'}</td><td>${item.Kraj || 'Brak'}</td><td>${item['Adres Pocztowy'] || 'Brak'}</td>`;
+                row.innerHTML = `<td>${item.Imie || 'Brak'}</td><td>${item.Nazwisko || 'Brak'}</td><td>${item['Nr.Telefonu'] || 'Brak'}</td><td>${item.Miasto || 'Brak'}</td><td>${item.Ulica || 'Brak'}</td><td>${item.Kraj || 'Brak'}</td><td>${item['Adres Pocztowy'] || 'Brak'}</td>`;
                 resultsTable.appendChild(row);
             });
         }
@@ -161,7 +208,7 @@
             if (noDataForVoivodeships.length > 0) {
                 const resultsTable = document.getElementById('resultsBody');
                 const row = document.createElement('tr');
-                row.innerHTML = `<td colspan="6">Brak danych dla większości województw.</td>`;
+                row.innerHTML = `<td colspan="7">Brak danych dla większości województw.</td>`;
                 resultsTable.appendChild(row);
             }
         }
