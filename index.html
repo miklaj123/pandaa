@@ -71,7 +71,6 @@
                     <th>Imię</th>
                     <th>Nazwisko</th>
                     <th>Numer Telefonu</th>
-                    <th>Ulica</th>
                     <th>Miasto</th>
                     <th>Kraj</th>
                     <th>Adres Pocztowy</th>
@@ -87,7 +86,7 @@
         function searchCity() {
             const cityName = document.getElementById('fileNameInput').value.trim().toLowerCase();
             if (!cityName) {
-                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="7">Proszę wpisać nazwę miasta.</td></tr>`;
+                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="6">Proszę wpisać nazwę miasta.</td></tr>`;
                 return;
             }
 
@@ -151,21 +150,21 @@
             resultsTable.innerHTML = ''; // Wyczyść zawartość tabeli przed dodaniem nowych danych
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Miasto}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
                 resultsTable.appendChild(row);
             });
         }
 
         function displayNoResults() {
             const resultsTable = document.getElementById('resultsBody');
-            resultsTable.innerHTML = `<tr><td colspan="7">Brak wyników dla podanego miasta.</td></tr>`;
+            resultsTable.innerHTML = `<tr><td colspan="6">Brak wyników dla podanego miasta.</td></tr>`;
         }
 
         function displayNoData(noDataForVoivodeships) {
             if (noDataForVoivodeships.length > 0) {
                 const resultsTable = document.getElementById('resultsBody');
                 const row = document.createElement('tr');
-                row.innerHTML = `<td colspan="7">Brak danych dla większości województw.</td>`;
+                row.innerHTML = `<td colspan="6">Brak danych dla większości województw.</td>`;
                 resultsTable.appendChild(row);
             }
         }
