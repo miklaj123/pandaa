@@ -1,0 +1,7 @@
+# Udostępnianie plików z ukrytego folderu
+Alias /pandaa/hidden /pandaa/hidden/test
+<Directory "/pandaa/hidden/test">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
