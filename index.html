@@ -110,6 +110,8 @@
             ];
 
             let noDataForVoivodeships = [];
+            let duplicates = {};
+            let results = [];
 
             voivodeships.forEach(voivodeship => {
                 const filePath = `test/${voivodeship}/${cityName}.json`;
@@ -121,7 +123,13 @@
                         return response.json();
                     })
                     .then(data => {
-                        displayResults(data);
+                        data.forEach(item => {
+                            const key = `${item.Imie}-${item.Nazwisko}`;
+                            if (!duplicates[key]) {
+                                duplicates[key] = true;
+                                results.push(item);
+                            }
+                        });
                     })
                     .catch(error => {
                         noDataForVoivodeships.push(voivodeship.replace(/-/g, ' ')); // Usuwamy myślniki dla lepszej czytelności
@@ -129,6 +137,10 @@
                     .finally(() => {
                         if (noDataForVoivodeships.length === voivodeships.length) {
                             displayNoData(noDataForVoivodeships);
+                        } else if (results.length > 0) {
+                            displayResults(results);
+                        } else {
+                            displayNoResults();
                         }
                     });
             });
@@ -136,11 +148,17 @@
 
         function displayResults(data) {
             const resultsTable = document.getElementById('resultsBody');
+            resultsTable.innerHTML = ''; // Wyczyść zawartość tabeli przed dodaniem nowych danych
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
                 resultsTable.appendChild(row);
             });
+        }
+
+        function displayNoResults() {
+            const resultsTable = document.getElementById('resultsBody');
+            resultsTable.innerHTML = `<tr><td colspan="7">Brak wyników dla podanego miasta.</td></tr>`;
         }
 
         function displayNoData(noDataForVoivodeships) {
