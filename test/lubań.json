@@ -1,15 +1,18 @@
 [
   {
-    "nw": "1881294",
-    "nw_1": "851276497",
-    "Imie": "Mikołaj",
-    "Nazwisko": "Pytel",
+    "nw": "514132",
+    "nw_1": "929978714",
+    "Imie": "Nikita",
+    "Nazwisko": "Khistov",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "West Pomeranian Voivodeship",
     "Miasto": "Lubań",
-    "Ulica": "Lubań 59-800 Torowa 10a:20",
-    "Adres Pocztowy": "59-800",
-    "Nr.Telefonu": "576430521"
+    "Ulica": "Wąska 2A",
+    "Adres Pocztowy": " 1 piętro",
+    "Nr.Telefonu": "59-800",
+    "__parsed_extra": [
+      "+48 889197020"
+    ]
   }
 ]

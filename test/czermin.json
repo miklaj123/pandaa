@@ -1,18 +1,54 @@
 [
   {
-    "nw": "495383",
-    "nw_1": "917020928",
-    "Imie": "Wiktor",
-    "Nazwisko": "Ptaszyk",
+    "nw": "2327740",
+    "nw_1": "282774454",
+    "Imie": "Kacper",
+    "Nazwisko": "Wyzga",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
     "Miasto": "Czermin",
-    "Ulica": "Pieruchy 18",
-    "Adres Pocztowy": " 63-304 Czermin",
-    "Nr.Telefonu": "63-304",
-    "__parsed_extra": [
-      "453 298 102"
-    ]
+    "Ulica": "Czermin 202",
+    "Adres Pocztowy": "39-304",
+    "Nr.Telefonu": "884940727"
+  },
+  {
+    "nw": "978359",
+    "nw_1": "593388709",
+    "Imie": "Anna",
+    "Nazwisko": "Bożek",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "Czermin",
+    "Ulica": "Ziempniów 10",
+    "Adres Pocztowy": "39-304",
+    "Nr.Telefonu": "784200034"
+  },
+  {
+    "nw": "1699153",
+    "nw_1": "373444633",
+    "Imie": "Natan",
+    "Nazwisko": "Zelasko",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "Czermin",
+    "Ulica": "372a",
+    "Adres Pocztowy": "39-304",
+    "Nr.Telefonu": "662771493"
+  },
+  {
+    "nw": "1535152",
+    "nw_1": "744090085",
+    "Imie": "jakub",
+    "Nazwisko": "kolisz",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "Czermin",
+    "Ulica": "czermin  184",
+    "Adres Pocztowy": "39-304",
+    "Nr.Telefonu": "665678820"
   }
 ]

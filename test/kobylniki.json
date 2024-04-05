@@ -1,29 +1,15 @@
 [
   {
-    "nw": "1858477",
-    "nw_1": "536695815",
-    "Imie": "Oliwier",
-    "Nazwisko": "Pilch",
+    "nw": "1076113",
+    "nw_1": "516863252",
+    "Imie": "Adrian",
+    "Nazwisko": "Adamczyk",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Swietokrzyskie",
     "Miasto": "Kobylniki",
-    "Ulica": "62-090 Kobylniki"
-  },
-  {
-    "nw": "122466",
-    "nw_1": "899126016",
-    "Imie": "Iwo",
-    "Nazwisko": "Kozicki",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Kobylniki",
-    "Ulica": "Jesionowa",
-    "Adres Pocztowy": " 18",
-    "Nr.Telefonu": "62-090",
-    "__parsed_extra": [
-      "502232786"
-    ]
+    "Ulica": "The home number is 97. Kobylniki 97",
+    "Adres Pocztowy": "28-530",
+    "Nr.Telefonu": "570130650"
   }
 ]

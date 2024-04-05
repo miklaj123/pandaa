@@ -1,15 +1,28 @@
 [
   {
-    "nw": "453972",
-    "nw_1": "772281743",
-    "Imie": "Dawid",
-    "Nazwisko": "Górniak",
+    "nw": "2290371",
+    "nw_1": "438320558",
+    "Imie": "Julia",
+    "Nazwisko": "Nalberczynska",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Lower Silesian Voivodeship",
     "Miasto": "Karpacz",
-    "Ulica": "sciegny 125",
+    "Ulica": "Obrońców Pokoju 3 ",
     "Adres Pocztowy": "58-540",
-    "Nr.Telefonu": "+48732777494"
+    "Nr.Telefonu": "533319050"
+  },
+  {
+    "nw": "1163507",
+    "nw_1": "937659858",
+    "Imie": "Dawid",
+    "Nazwisko": "Ochtoń",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Lower Silesian Voivodeship",
+    "Miasto": "Karpacz",
+    "Ulica": "Bolesława Prusa 8/2",
+    "Adres Pocztowy": "58-540",
+    "Nr.Telefonu": "570884080"
   }
 ]

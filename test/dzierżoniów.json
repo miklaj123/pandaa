@@ -1,28 +1,54 @@
 [
   {
-    "nw": "1300257",
-    "nw_1": "302364215",
-    "Imie": "Piotr",
-    "Nazwisko": "Lis",
+    "nw": "2293598",
+    "nw_1": "992059820",
+    "Imie": "Wiktoria ",
+    "Nazwisko": "Chudzik",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "dzierżoniów",
-    "Ulica": "ulica Zielona 12a/5",
+    "Wojewodztwo": "Silesian Voivodeship",
+    "Miasto": "Dzierżoniów ",
+    "Ulica": "Dzierżoniów ząbkowicka 28/6",
     "Adres Pocztowy": "58-200",
-    "Nr.Telefonu": "500865393"
+    "Nr.Telefonu": "884087490"
   },
   {
-    "nw": "2128847",
-    "nw_1": "337620709",
-    "Imie": "Julia",
-    "Nazwisko": "Pawlak",
+    "nw": "891454",
+    "nw_1": "624827819",
+    "Imie": "Anna",
+    "Nazwisko": "Górecka",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "dzierżoniów",
-    "Ulica": "os.różane 12c/3",
+    "Wojewodztwo": "Silesian Voivodeship",
+    "Miasto": "Dzierżoniów",
+    "Ulica": "osiedle Różane 20F",
     "Adres Pocztowy": "58-200",
-    "Nr.Telefonu": "+48537655897"
+    "Nr.Telefonu": "575522399"
+  },
+  {
+    "nw": "568671",
+    "nw_1": "624827819",
+    "Imie": "Tomek",
+    "Nazwisko": "Górecki",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Silesian Voivodeship",
+    "Miasto": "dzierżoniów",
+    "Ulica": "piaskowa 19",
+    "Adres Pocztowy": "58-200",
+    "Nr.Telefonu": "575522399"
+  },
+  {
+    "nw": "588191",
+    "nw_1": "624827819",
+    "Imie": "Sebastian",
+    "Nazwisko": "Górecki",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Silesian Voivodeship",
+    "Miasto": "Dzierżoniów",
+    "Ulica": "osiedle różane 20F",
+    "Adres Pocztowy": "58-200",
+    "Nr.Telefonu": "575522399"
   }
 ]

@@ -1,57 +1,28 @@
 [
   {
-    "nw": "958965",
-    "nw_1": "823691991",
-    "Imie": "Krystian",
-    "Nazwisko": "Kowalczyl",
+    "nw": "531976",
+    "nw_1": "918409417",
+    "Imie": "dmytro",
+    "Nazwisko": "andronnikov",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Wroclaw",
-    "Ulica": "Chorwacka 18/4",
-    "Adres Pocztowy": "51-107",
-    "Nr.Telefonu": "531629820"
+    "Wojewodztwo": "West Pomeranian Voivodeship",
+    "Miasto": "wroclaw",
+    "Ulica": "borowska 36/2",
+    "Adres Pocztowy": "50-552",
+    "Nr.Telefonu": "+48690910301"
   },
   {
-    "nw": "1761173",
-    "nw_1": "903538603",
-    "Imie": "Volodymyr",
-    "Nazwisko": "Chalenko",
+    "nw": "1124492",
+    "nw_1": "507633848",
+    "Imie": "dmytro",
+    "Nazwisko": "andronnikov",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Wroclaw",
-    "Ulica": "Kielecka 14b",
-    "Adres Pocztowy": " 19",
-    "Nr.Telefonu": "54029",
-    "__parsed_extra": [
-      "+48574710749"
-    ]
-  },
-  {
-    "nw": "475166",
-    "nw_1": "955164609",
-    "Imie": "Kareem",
-    "Nazwisko": "Al-Iusefi",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Wroclaw",
-    "Ulica": "legnicka 33",
-    "Adres Pocztowy": "53-672",
-    "Nr.Telefonu": "+48728119262"
-  },
-  {
-    "nw": "1907190",
-    "nw_1": "168560580",
-    "Imie": "llllll",
-    "Nazwisko": "DDDD",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Wroclaw",
-    "Ulica": "bramowa 21/45",
-    "Adres Pocztowy": "20-467",
-    "Nr.Telefonu": "543568547"
+    "Wojewodztwo": "West Pomeranian Voivodeship",
+    "Miasto": "wroclaw",
+    "Ulica": "borowska 36/2",
+    "Adres Pocztowy": "50-552",
+    "Nr.Telefonu": "+48690910301"
   }
 ]

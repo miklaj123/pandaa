@@ -1,13 +1,15 @@
 [
   {
-    "nw": "2310172",
-    "nw_1": "270135548",
-    "Imie": "Iwona",
-    "Nazwisko": "Gurba ",
+    "nw": "359230",
+    "nw_1": "181325562",
+    "Imie": "Krystian",
+    "Nazwisko": "Gierut",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Gorlice ",
-    "Ulica": "Podkoscielna 2/5"
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "Gorlice",
+    "Ulica": "3 Maja 14/16",
+    "Adres Pocztowy": "38-300",
+    "Nr.Telefonu": "794235980"
   }
 ]

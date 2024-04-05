@@ -1,28 +1,18 @@
 [
   {
-    "nw": "2129659",
-    "nw_1": "667899364",
-    "Imie": "Bartosz",
-    "Nazwisko": "Mikołajczak",
+    "nw": "1533188",
+    "nw_1": "859704061",
+    "Imie": "tomasz",
+    "Nazwisko": "rzetecki",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Orzechowo",
-    "Ulica": "Głogowa 14",
-    "Adres Pocztowy": "62-322",
-    "Nr.Telefonu": "518005098"
-  },
-  {
-    "nw": "2152463",
-    "nw_1": "652691124",
-    "Imie": "Bartek",
-    "Nazwisko": "Mikołajczak",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Orzechowo",
-    "Ulica": "Głogowa 14",
-    "Adres Pocztowy": "62-322",
-    "Nr.Telefonu": "518005098"
+    "Wojewodztwo": "West Pomeranian Voivodeship",
+    "Miasto": "orzechowo",
+    "Ulica": "orzechowo 13A ",
+    "Adres Pocztowy": " jest to wioska nie ma ulicy",
+    "Nr.Telefonu": "72-200",
+    "__parsed_extra": [
+      "882076047"
+    ]
   }
 ]

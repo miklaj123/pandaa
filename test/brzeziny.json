@@ -1,41 +1,65 @@
 [
   {
-    "nw": "973349",
-    "nw_1": "996284024",
-    "Imie": "Miłosz",
-    "Nazwisko": "Olszewski",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Brzeziny",
-    "Ulica": "Dzięcioły 20",
-    "Adres Pocztowy": "62-874",
-    "Nr.Telefonu": "668187924"
-  },
-  {
-    "nw": "712903",
-    "nw_1": "520325890",
+    "nw": "497959",
+    "nw_1": "221804248",
     "Imie": "Wiktor",
-    "Nazwisko": "Flas",
+    "Nazwisko": "Pisarek",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Swietokrzyskie",
     "Miasto": "Brzeziny",
-    "Ulica": "ul.Ks Józefa Kurzawy 11",
-    "Adres Pocztowy": "62-874",
-    "Nr.Telefonu": "536459442"
+    "Ulica": "Ul. Chęcińska 35"
   },
   {
-    "nw": "1527205",
-    "nw_1": "736825438",
-    "Imie": "Aron",
-    "Nazwisko": "Wozniak",
+    "nw": "2291516",
+    "nw_1": "445565121",
+    "Imie": "Bartosz",
+    "Nazwisko": "Januszek ",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "Brzeziny ",
+    "Ulica": "Brzeziny Ul. Checińska 234 26/026",
+    "Adres Pocztowy": "26/026",
+    "Nr.Telefonu": "781350162"
+  },
+  {
+    "nw": "1841022",
+    "nw_1": "752376342",
+    "Imie": "Wiktor",
+    "Nazwisko": "Ubożak",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Swietokrzyskie",
     "Miasto": "Brzeziny",
-    "Ulica": "Moczalec 3A",
-    "Adres Pocztowy": "62-874",
-    "Nr.Telefonu": "663546054"
+    "Ulica": "Chęcińska 129 26-026 Brzeziny",
+    "Adres Pocztowy": "26-026",
+    "Nr.Telefonu": "530337832"
+  },
+  {
+    "nw": "1371089",
+    "nw_1": "603367593",
+    "Imie": "Oskar",
+    "Nazwisko": "Maciejec",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "Brzeziny",
+    "Ulica": "Ul.Błękitna 1",
+    "Adres Pocztowy": "26-026",
+    "Nr.Telefonu": "884937647"
+  },
+  {
+    "nw": "1243975",
+    "nw_1": "831816943",
+    "Imie": "Kacper",
+    "Nazwisko": "Pałyga",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "brzeziny",
+    "Ulica": "wrzosowa 25",
+    "Adres Pocztowy": "26-026",
+    "Nr.Telefonu": "730217314"
   }
 ]

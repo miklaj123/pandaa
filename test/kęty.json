@@ -1,18 +1,28 @@
 [
   {
-    "nw": "2004282",
-    "nw_1": "687418143",
-    "Imie": "Dawid",
-    "Nazwisko": "Grabowski",
+    "nw": "1133581",
+    "nw_1": "235209988",
+    "Imie": "Maksymilian",
+    "Nazwisko": "Witkowski",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Silesian Voivodeship",
     "Miasto": "Kęty",
-    "Ulica": "Szkotnia 35a",
-    "Adres Pocztowy": "32-650 Kęty",
-    "Nr.Telefonu": "32-650",
-    "__parsed_extra": [
-      "502-294-033"
-    ]
+    "Ulica": "Kępa prawa 5D",
+    "Adres Pocztowy": "43-340",
+    "Nr.Telefonu": "661511525"
+  },
+  {
+    "nw": "488052",
+    "nw_1": "873602002",
+    "Imie": "Jan",
+    "Nazwisko": "Nowak",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Silesian Voivodeship",
+    "Miasto": "Kęty",
+    "Ulica": "Osiedle Królickiego 2/3",
+    "Adres Pocztowy": "32-650",
+    "Nr.Telefonu": "734069292"
   }
 ]

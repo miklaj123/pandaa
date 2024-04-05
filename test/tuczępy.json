@@ -1,15 +1,41 @@
 [
   {
-    "nw": "1381281",
-    "nw_1": "194171496",
-    "Imie": "julia",
-    "Nazwisko": "kłoda",
+    "nw": "1030138",
+    "nw_1": "788966211",
+    "Imie": "Jan",
+    "Nazwisko": "Czaja",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "tuczępy",
-    "Ulica": "tuczępy 25/3",
-    "Adres Pocztowy": "64-421",
-    "Nr.Telefonu": "886529325"
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "Tuczępy",
+    "Ulica": "Tuczępy 95",
+    "Adres Pocztowy": "28-142",
+    "Nr.Telefonu": "728431792"
+  },
+  {
+    "nw": "1479966",
+    "nw_1": "559426852",
+    "Imie": "Gabriel",
+    "Nazwisko": "Furman",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "Tuczępy",
+    "Ulica": "Chałupki 52",
+    "Adres Pocztowy": "28-142",
+    "Nr.Telefonu": "697484930"
+  },
+  {
+    "nw": "1148315",
+    "nw_1": "856929049",
+    "Imie": "monika",
+    "Nazwisko": "tutak",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Swietokrzyskie",
+    "Miasto": "Tuczępy",
+    "Ulica": "Tuczępy 38b",
+    "Adres Pocztowy": "28-142",
+    "Nr.Telefonu": "537302356"
   }
 ]

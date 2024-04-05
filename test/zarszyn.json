@@ -1,18 +1,28 @@
 [
   {
-    "nw": "1430558",
-    "nw_1": "853720043",
-    "Imie": "Przemysław",
-    "Nazwisko": "Szczypel",
+    "nw": "2217726",
+    "nw_1": "366848233",
+    "Imie": "Szymon",
+    "Nazwisko": "Folta",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
     "Miasto": "Zarszyn",
-    "Ulica": "Szkolna 33",
-    "Adres Pocztowy": " Podkarpacie",
-    "Nr.Telefonu": "38-530",
-    "__parsed_extra": [
-      "570945044"
-    ]
+    "Ulica": "Bieszczadzka 240",
+    "Adres Pocztowy": "38-530",
+    "Nr.Telefonu": "503703585"
+  },
+  {
+    "nw": "1470282",
+    "nw_1": "573842217",
+    "Imie": "Oskar",
+    "Nazwisko": "Wanielista",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "Zarszyn",
+    "Ulica": "Pisarowce 31",
+    "Adres Pocztowy": "38-530",
+    "Nr.Telefonu": "697795714"
   }
 ]

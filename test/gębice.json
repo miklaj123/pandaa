@@ -1,15 +1,28 @@
 [
   {
-    "nw": "1479104",
-    "nw_1": "404371014",
-    "Imie": "Karol",
-    "Nazwisko": "Bak",
+    "nw": "2301850",
+    "nw_1": "131007081",
+    "Imie": "Kacper",
+    "Nazwisko": "Szwarckopf",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Kujawsko-Pomorskie",
     "Miasto": "Gębice",
-    "Ulica": "Czarnkowska 2",
-    "Adres Pocztowy": "64-707",
-    "Nr.Telefonu": "784472347"
+    "Ulica": "Kościuszki 23",
+    "Adres Pocztowy": "88-330",
+    "Nr.Telefonu": "669361639"
+  },
+  {
+    "nw": "2243573",
+    "nw_1": "813184910",
+    "Imie": "Kacper",
+    "Nazwisko": "Szwarckopf",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Kujawsko-Pomorskie",
+    "Miasto": "Gębice",
+    "Ulica": "Kościuszki 23",
+    "Adres Pocztowy": "88-330",
+    "Nr.Telefonu": "669361639"
   }
 ]

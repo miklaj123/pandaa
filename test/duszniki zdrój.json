@@ -1,39 +1,28 @@
 [
   {
-    "nw": "2020108",
-    "nw_1": "683018843",
-    "Imie": "Igor",
-    "Nazwisko": "Ziółkowski",
+    "nw": "2206603",
+    "nw_1": "916012131",
+    "Imie": "Miłosz ",
+    "Nazwisko": "Brzoskowski ",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Duszniki Zdrój",
-    "Ulica": "Słoneczna 3a/1",
+    "Wojewodztwo": "Lower Silesian Voivodeship",
+    "Miasto": "Duszniki zdrój ",
+    "Ulica": "Juliusza Słowackiego 21b 5",
     "Adres Pocztowy": "57-340",
-    "Nr.Telefonu": "664757259"
+    "Nr.Telefonu": "518398080"
   },
   {
-    "nw": "2020102",
-    "nw_1": "683018843",
-    "Imie": "Igor",
-    "Nazwisko": "Ziółkowski",
+    "nw": "1101885",
+    "nw_1": "777198591",
+    "Imie": "Miłosz",
+    "Nazwisko": "Brzoskowski",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Duszniki Zdrój",
-    "Ulica": "Słoneczna 3a/1",
+    "Wojewodztwo": "Lower Silesian Voivodeship",
+    "Miasto": "Duszniki zdrój",
+    "Ulica": "J.Słowackiego 21b 5",
     "Adres Pocztowy": "57-340",
-    "Nr.Telefonu": "664757259"
-  },
-  {
-    "nw": "586026",
-    "nw_1": "509231189",
-    "Imie": "Mateusz",
-    "Nazwisko": "Spyra",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Duszniki Zdrój",
-    "Ulica": "street:Wojska Polskiego"
+    "Nr.Telefonu": "518398080"
   }
 ]

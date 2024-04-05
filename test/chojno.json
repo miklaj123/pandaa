@@ -1,15 +1,28 @@
 [
   {
-    "nw": "958462",
-    "nw_1": "763802343",
-    "Imie": "Oskar",
-    "Nazwisko": "Ferszt",
+    "nw": "1588066",
+    "nw_1": "598889873",
+    "Imie": "Maciej",
+    "Nazwisko": "Kapała",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Lodz Voivodeship",
     "Miasto": "Chojno",
-    "Ulica": "Chojno 55",
-    "Adres Pocztowy": "87-602",
-    "Nr.Telefonu": "884817803"
+    "Ulica": "78A/4",
+    "Adres Pocztowy": "63-921",
+    "Nr.Telefonu": "782281753"
+  },
+  {
+    "nw": "1626915",
+    "nw_1": "495921434",
+    "Imie": "Maciej",
+    "Nazwisko": "Kapała",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Lodz Voivodeship",
+    "Miasto": "Chojno",
+    "Ulica": "78A/4",
+    "Adres Pocztowy": "63-921",
+    "Nr.Telefonu": "782281753"
   }
 ]

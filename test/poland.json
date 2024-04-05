@@ -1,32 +1,42 @@
 [
   {
-    "nw": "1557309",
-    "nw_1": "525763285",
-    "Imie": "Oliwia",
-    "Nazwisko": "Nowak",
+    "nw": "2194806",
+    "nw_1": "361705147",
+    "Imie": "Karolina",
+    "Nazwisko": "Szymańska ",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Masovian Voivodeship",
     "Miasto": "Poland",
-    "Ulica": "ul. Władysława Hasiora 19 Leszno",
-    "Adres Pocztowy": "64-100",
-    "Nr.Telefonu": "885820110"
+    "Ulica": "Marki",
+    "Adres Pocztowy": " Jacka Soplicy 12 ",
+    "Nr.Telefonu": "05-270",
+    "__parsed_extra": [
+      "+48515676447"
+    ]
   },
   {
-    "nw": "388213",
-    "nw_1": "363725132",
-    "Imie": "michał",
-    "Nazwisko": "faliński",
+    "nw": "2211546",
+    "nw_1": "115891907",
+    "Imie": "Izabela",
+    "Nazwisko": "Sawicka",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Masovian Voivodeship",
     "Miasto": "Poland",
-    "Ulica": "dolnośląskie",
-    "Adres Pocztowy": " godzikowice",
-    "Nr.Telefonu": "spacerowa 22",
-    "__parsed_extra": [
-      "55-200",
-      "601695044"
-    ]
+    "Ulica": "Ul. Szosa Jadowska 148"
+  },
+  {
+    "nw": "2181285",
+    "nw_1": "627909898",
+    "Imie": "Bartosz ",
+    "Nazwisko": "Kucharczyk ",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Masovian Voivodeship",
+    "Miasto": "Poland",
+    "Ulica": "Kasinka Mała 790 ",
+    "Adres Pocztowy": "34-734",
+    "Nr.Telefonu": "794788364"
   }
 ]

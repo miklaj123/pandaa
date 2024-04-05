@@ -1,15 +1,28 @@
 [
   {
-    "nw": "1767226",
-    "nw_1": "634944572",
-    "Imie": "Kacper",
-    "Nazwisko": "Walczak",
+    "nw": "451520",
+    "nw_1": "593379500",
+    "Imie": "Wiktor",
+    "Nazwisko": "Potaczek",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "olszówka",
-    "Ulica": "Dębowiczki 25/4",
-    "Adres Pocztowy": "62-641",
-    "Nr.Telefonu": "451560928"
+    "Wojewodztwo": "Lesser Poland Voivodeship",
+    "Miasto": "Olszówka",
+    "Ulica": "Olszówka 416",
+    "Adres Pocztowy": "34-730",
+    "Nr.Telefonu": "576374000"
+  },
+  {
+    "nw": "1263657",
+    "nw_1": "857752395",
+    "Imie": "Krystian",
+    "Nazwisko": "Pietrzak",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Lesser Poland Voivodeship",
+    "Miasto": "Olszówka",
+    "Ulica": "Olszówka 404",
+    "Adres Pocztowy": "34-730",
+    "Nr.Telefonu": "883886975"
   }
 ]

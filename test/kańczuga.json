@@ -1,15 +1,31 @@
 [
   {
-    "nw": "1260647",
-    "nw_1": "419061615",
-    "Imie": "Filip",
-    "Nazwisko": "Wilk",
+    "nw": "1344528",
+    "nw_1": "156661333",
+    "Imie": "Konrad",
+    "Nazwisko": "Wójcik",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
     "Miasto": "Kańczuga",
-    "Ulica": "Wincentego Witosa 4/2",
+    "Ulica": "Okulickiego 17",
     "Adres Pocztowy": "37-220",
-    "Nr.Telefonu": "782862241"
+    "Nr.Telefonu": "669165596"
+  },
+  {
+    "nw": "822955",
+    "nw_1": "429602233",
+    "Imie": "Krystian",
+    "Nazwisko": "Sadowski",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "Kańczuga",
+    "Ulica": "Siedleczka",
+    "Adres Pocztowy": " 275a",
+    "Nr.Telefonu": "37-220",
+    "__parsed_extra": [
+      "883120028"
+    ]
   }
 ]

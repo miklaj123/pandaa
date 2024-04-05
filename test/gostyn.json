@@ -1,28 +1,15 @@
 [
   {
-    "nw": "2175172",
-    "nw_1": "512397818",
-    "Imie": "Daniel",
-    "Nazwisko": "Nowak",
+    "nw": "505275",
+    "nw_1": "131443535",
+    "Imie": "sergiej",
+    "Nazwisko": "torcheniuk",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "West Pomeranian Voivodeship",
     "Miasto": "Gostyn",
-    "Ulica": "Czachorowo 21",
-    "Adres Pocztowy": "63-800",
-    "Nr.Telefonu": "663470204"
-  },
-  {
-    "nw": "2199443",
-    "nw_1": "875405876",
-    "Imie": "Bartosz",
-    "Nazwisko": "Tomczak",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Gostyn",
-    "Ulica": "Słowackiego 9",
-    "Adres Pocztowy": "63-800",
-    "Nr.Telefonu": "728767683"
+    "Ulica": "Gostyn 2A",
+    "Adres Pocztowy": "72-405",
+    "Nr.Telefonu": "577456564"
   }
 ]

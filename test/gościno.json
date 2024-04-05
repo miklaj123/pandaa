@@ -1,13 +1,28 @@
 [
   {
-    "nw": "2244782",
-    "nw_1": "795008526",
-    "Imie": "Michał",
-    "Nazwisko": "Jakubów",
+    "nw": "845293",
+    "nw_1": "387670132",
+    "Imie": "Arkadiusz",
+    "Nazwisko": "Wypych",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "West Pomeranian Voivodeship",
     "Miasto": "Gościno",
-    "Ulica": "Gościno "
+    "Ulica": "ul. Jaśminowa 1b",
+    "Adres Pocztowy": "78-120",
+    "Nr.Telefonu": "+48 501 031 860"
+  },
+  {
+    "nw": "2029754",
+    "nw_1": "438787760",
+    "Imie": "oliwier",
+    "Nazwisko": "ciesielski",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "West Pomeranian Voivodeship",
+    "Miasto": "Gościno",
+    "Ulica": "wartkowo 6",
+    "Adres Pocztowy": "78-121",
+    "Nr.Telefonu": "511234752"
   }
 ]

@@ -1,41 +1,28 @@
 [
   {
-    "nw": "1370150",
-    "nw_1": "929009989",
-    "Imie": "Wojciech",
-    "Nazwisko": "Szwedka",
+    "nw": "354133",
+    "nw_1": "562748664",
+    "Imie": "Marcel",
+    "Nazwisko": "Korotusz",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
     "Miasto": "Tychy",
-    "Ulica": "Piłsudskiego 56/124",
+    "Ulica": "Dmowskiego 8/308",
     "Adres Pocztowy": "43-100",
-    "Nr.Telefonu": "513374189"
+    "Nr.Telefonu": "507626797"
   },
   {
-    "nw": "629611",
-    "nw_1": "666260085",
-    "Imie": "Jakub",
-    "Nazwisko": "bratuszewski",
+    "nw": "1276989",
+    "nw_1": "442131114",
+    "Imie": "Wojtek",
+    "Nazwisko": "Różnicki",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Tychy",
-    "Ulica": "Kubicy 25/36",
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "tychy",
+    "Ulica": "żorska 105A nr 10",
     "Adres Pocztowy": "43-100",
-    "Nr.Telefonu": "573 919 393"
-  },
-  {
-    "nw": "522387",
-    "nw_1": "563119008",
-    "Imie": "Mateusz",
-    "Nazwisko": "Owczarski",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Tychy",
-    "Ulica": "Śląsk",
-    "Adres Pocztowy": "43-100",
-    "Nr.Telefonu": "+48574523588"
+    "Nr.Telefonu": "502941386"
   }
 ]

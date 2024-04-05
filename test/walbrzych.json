@@ -1,15 +1,18 @@
 [
   {
-    "nw": "2293739",
-    "nw_1": "456652523",
-    "Imie": "klaudia",
-    "Nazwisko": "jakubczak",
+    "nw": "1345759",
+    "nw_1": "378397535",
+    "Imie": "Yaroslav",
+    "Nazwisko": "Duzhenko",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "walbrzych ",
-    "Ulica": "wrocławska 96/4",
-    "Adres Pocztowy": "58-306",
-    "Nr.Telefonu": "535284581"
+    "Wojewodztwo": "Silesian Voivodeship",
+    "Miasto": "Walbrzych",
+    "Ulica": "Wałbrzych",
+    "Adres Pocztowy": " Palisadowa 25/19",
+    "Nr.Telefonu": "58-316",
+    "__parsed_extra": [
+      "+48452428293"
+    ]
   }
 ]

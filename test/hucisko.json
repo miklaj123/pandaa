@@ -1,15 +1,18 @@
 [
   {
-    "nw": "1398231",
-    "nw_1": "190055765",
-    "Imie": "Krzysztof",
-    "Nazwisko": "Dyduch",
+    "nw": "2336193",
+    "nw_1": "769601372",
+    "Imie": "Patryk",
+    "Nazwisko": "Bartosz",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "hucisko",
-    "Ulica": "pewelka 60B",
-    "Adres Pocztowy": "34-233",
-    "Nr.Telefonu": "609261020"
+    "Wojewodztwo": "Subcarpathian Voivodeship",
+    "Miasto": "Hucisko",
+    "Ulica": "37-311 Hucisko",
+    "Adres Pocztowy": " Hucisko 135",
+    "Nr.Telefonu": "37-311",
+    "__parsed_extra": [
+      "517 527 528"
+    ]
   }
 ]

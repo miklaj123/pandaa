@@ -1,57 +1,54 @@
 [
   {
-    "nw": "1873297",
-    "nw_1": "110131770",
-    "Imie": "Bogumił",
-    "Nazwisko": "Kłodnicki",
+    "nw": "1519213",
+    "nw_1": "183931282",
+    "Imie": "Wiktor",
+    "Nazwisko": "Szczepaniak",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Masovian Voivodeship",
     "Miasto": "Laski",
-    "Ulica": "Graniczna",
-    "Adres Pocztowy": " 9D",
-    "Nr.Telefonu": "63-620",
-    "__parsed_extra": [
-      "695420668"
-    ]
+    "Ulica": "Piaskowa 5",
+    "Adres Pocztowy": "05-080",
+    "Nr.Telefonu": "+48732676254"
   },
   {
-    "nw": "1488337",
-    "nw_1": "305552499",
-    "Imie": "natan",
-    "Nazwisko": "biel",
+    "nw": "205117",
+    "nw_1": "890697319",
+    "Imie": "Aleksander",
+    "Nazwisko": "Ziemiecki",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "laski",
-    "Ulica": "laski 112A/4",
-    "Adres Pocztowy": "57-251",
-    "Nr.Telefonu": "574402483"
-  },
-  {
-    "nw": "1661027",
-    "nw_1": "427279000",
-    "Imie": "natan",
-    "Nazwisko": "biel",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "laski",
-    "Ulica": "Laski112a/4",
-    "Adres Pocztowy": "57-351",
-    "Nr.Telefonu": "574402483"
-  },
-  {
-    "nw": "1256961",
-    "nw_1": "969239657",
-    "Imie": "Nikodem",
-    "Nazwisko": "Zimoch",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Masovian Voivodeship",
     "Miasto": "Laski",
-    "Ulica": "ul.Czereśniowa 10",
-    "Adres Pocztowy": "63-620",
-    "Nr.Telefonu": "732440106"
+    "Ulica": "Pomidorowa 4",
+    "Adres Pocztowy": "05-080",
+    "Nr.Telefonu": "733152601"
+  },
+  {
+    "nw": "1422325",
+    "nw_1": "191091573",
+    "Imie": "Kacper",
+    "Nazwisko": "Gregorczyk",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Masovian Voivodeship",
+    "Miasto": "Laski",
+    "Ulica": "Laski 25",
+    "Adres Pocztowy": "26670",
+    "Nr.Telefonu": "+48519609429"
+  },
+  {
+    "nw": "199326",
+    "nw_1": "344508209",
+    "Imie": "Dawid",
+    "Nazwisko": "Adamski",
+    "nw_2": "39959",
+    "Kraj": "Poland",
+    "Wojewodztwo": "Masovian Voivodeship",
+    "Miasto": "Laski",
+    "Ulica": "laski ul zielona 34/36 kod pocztowy 05-080",
+    "Adres Pocztowy": "05-080",
+    "Nr.Telefonu": "785771234"
   }
 ]

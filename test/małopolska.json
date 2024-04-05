@@ -1,54 +1,39 @@
 [
   {
-    "nw": "2047421",
-    "nw_1": "357040613",
-    "Imie": "Wiktor",
-    "Nazwisko": "Dragan",
+    "nw": "1777673",
+    "nw_1": "310838583",
+    "Imie": "Igor",
+    "Nazwisko": "Kucia",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Lesser Poland Voivodeship",
     "Miasto": "Małopolska",
-    "Ulica": "Stanisław Dolny 490",
-    "Adres Pocztowy": "34-130",
-    "Nr.Telefonu": "+48 535 595 252"
+    "Ulica": "Sanka"
   },
   {
-    "nw": "2047423",
-    "nw_1": "357040613",
-    "Imie": "Wiktor",
-    "Nazwisko": "Dragan",
+    "nw": "183236",
+    "nw_1": "535208218",
+    "Imie": "Ksawier",
+    "Nazwisko": "Szczechura",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
+    "Wojewodztwo": "Lesser Poland Voivodeship",
     "Miasto": "Małopolska",
-    "Ulica": "Stanisław Dolny 490",
-    "Adres Pocztowy": "34-130",
-    "Nr.Telefonu": "+48 535 595 252"
+    "Ulica": "Lipnica Wielka 1059",
+    "Adres Pocztowy": "34-483",
+    "Nr.Telefonu": "573316163"
   },
   {
-    "nw": "2047424",
-    "nw_1": "357040613",
-    "Imie": "Wiktor",
-    "Nazwisko": "Dragan",
+    "nw": "17701",
+    "nw_1": "1836028",
+    "Imie": "szymon",
+    "Nazwisko": "lasota",
     "nw_2": "39959",
     "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Małopolska",
-    "Ulica": "Stanisław Dolny 490",
-    "Adres Pocztowy": "34-130",
-    "Nr.Telefonu": "+48 535 595 252"
-  },
-  {
-    "nw": "2047422",
-    "nw_1": "357040613",
-    "Imie": "Wiktor",
-    "Nazwisko": "Dragan",
-    "nw_2": "39959",
-    "Kraj": "Poland",
-    "Wojewodztwo": "Greater Poland Voivodeship",
-    "Miasto": "Małopolska",
-    "Ulica": "Stanisław Dolny 490",
-    "Adres Pocztowy": "34-130",
-    "Nr.Telefonu": "+48 535 595 252"
+    "Wojewodztwo": "Lesser Poland Voivodeship",
+    "Miasto": "małopolska",
+    "Ulica": "sledziejowice 214",
+    "Adres Pocztowy": "32-020",
+    "Nr.Telefonu": "531034965"
   }
 ]
