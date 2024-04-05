@@ -1,7 +1,0 @@
-# Udostępnianie plików z ukrytego folderu
-Alias /test /test/hidden
-<Directory "/test/hidden">
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-</Directory>
