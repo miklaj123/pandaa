@@ -92,35 +92,44 @@
                 return;
             }
 
-            const possibleFiles = ['warszawa', 'krakow', 'gdansk']; // Przykładowe nazwy plików
+            const voivodeships = [
+                'GREATER POLAND VOIVODESHIP',
+                'KUJAWSKO-POMORSKIE',
+                'LESSER POLAND VOIVODESHIP',
+                'LOWER SILESIAN VOIVODESHIP',
+                'LUBLIN VOIVODESHIP',
+                'LUBUSZ',
+                'MASOVIAN VOIVODESHIP',
+                'OPOLE VOIVODESHIP',
+                'PODLASIE',
+                'POMERANIAN VOIVODESHIP',
+                'SILESIAN VOIVODESHIP',
+                'SUBCARPATHIAN VOIVODESHIP',
+                'SWIETOKRZYSKIE',
+                'WARMIAN-MASURIAN VOIVODESHIP',
+                'WEST POMERANIAN VOIVODESHIP'
+            ];
 
-            let notFoundCount = 0;
+            let searchCompleted = 0;
 
-            possibleFiles.forEach(file => {
-                if (file.includes(cityName)) {
-                    fetch(`test/${file}.json`)
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Brak danych');
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            displayResults(data);
-                        })
-                        .catch(error => {
-                            console.error('Błąd:', error);
-                            notFoundCount++;
-                            if (notFoundCount === possibleFiles.length) {
-                                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Brak danych dla podanej nazwy miasta.</td></tr>`;
-                            }
-                        });
-                } else {
-                    notFoundCount++;
-                    if (notFoundCount === possibleFiles.length) {
-                        document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Brak danych dla podanej nazwy miasta.</td></tr>`;
-                    }
-                }
+            voivodeships.forEach(voivodeship => {
+                const filePath = `test/${voivodeship}/${cityName}.json`;
+                fetch(filePath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Brak danych');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        displayResults(data);
+                    })
+                    .catch(error => {
+                        searchCompleted++;
+                        if (searchCompleted === voivodeships.length) {
+                            document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Brak danych dla podanej nazwy miasta.</td></tr>`;
+                        }
+                    });
             });
         }
 
@@ -130,7 +139,7 @@
 
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
                 resultsTable.appendChild(row);
             });
         }
