@@ -89,6 +89,8 @@
                 document.getElementById('resultsBody').innerHTML = `<tr><td colspan="6">Proszę wpisać nazwę miasta.</td></tr>`;
                 return;
             }
+            
+            clearResultsTable();
 
             const voivodeships = [
                 'GREATER POLAND VOIVODESHIP',
@@ -137,13 +139,7 @@
             const resultsTable = document.getElementById('resultsBody');
             data.forEach(item => {
                 const row = document.createElement('tr');
-                const imie = item.Imie ? item.Imie : 'Brak';
-                const nazwisko = item.Nazwisko ? item.Nazwisko : 'Brak';
-                const telefon = item['Nr.Telefonu'] ? item['Nr.Telefonu'] : 'Brak';
-                const miasto = item.Miasto ? item.Miasto : 'Brak';
-                const kraj = item.Kraj ? item.Kraj : 'Brak';
-                const adresPocztowy = item['Adres Pocztowy'] ? item['Adres Pocztowy'] : 'Brak';
-                row.innerHTML = `<td>${imie}</td><td>${nazwisko}</td><td>${telefon}</td><td>${miasto}</td><td>${kraj}</td><td>${adresPocztowy}</td>`;
+                row.innerHTML = `<td>${item.Imie || 'Brak'}</td><td>${item.Nazwisko || 'Brak'}</td><td>${item['Numer Telefonu'] || 'Brak'}</td><td>${item.Miasto || 'Brak'}</td><td>${item.Kraj || 'Brak'}</td><td>${item['Adres Pocztowy'] || 'Brak'}</td>`;
                 resultsTable.appendChild(row);
             });
         }
@@ -155,6 +151,11 @@
                 row.innerHTML = `<td colspan="6">Brak danych dla większości województw.</td>`;
                 resultsTable.appendChild(row);
             }
+        }
+
+        function clearResultsTable() {
+            const resultsTable = document.getElementById('resultsBody');
+            resultsTable.innerHTML = ''; // Wyczyść zawartość tabeli przed dodaniem nowych danych
         }
     </script>
 </body>
