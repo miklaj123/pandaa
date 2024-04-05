@@ -2,74 +2,138 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Wyszukiwanie w danych CSV</title>
+    <title>Wyszukiwarka Miasta</title>
     <style>
-        /* Stylizacja */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to bottom right, #4c77b7, #6497cc);
+        }
+        .container {
+            max-width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 70%;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Wyszukiwanie danych</h1>
-    <div>
-        <input type="text" id="searchInput" placeholder="Szukaj...">
-        <button onclick="searchInCsv()">Szukaj</button>
+    <div class="container">
+        <h1>Wyszukiwarka Miasta</h1>
+        <div>
+            <input type="text" id="fileNameInput" placeholder="Nazwa miasta">
+            <button onclick="searchCity()">Wyszukaj</button>
+        </div>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Numer Telefonu</th>
+                    <th>Ulica</th>
+                    <th>Miasto</th>
+                    <th>Województwo</th>
+                    <th>Kraj</th>
+                    <th>Adres Pocztowy</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <!-- Tutaj będą wyświetlane wyniki -->
+            </tbody>
+        </table>
     </div>
-    <table id="resultsTable">
-        <thead>
-            <tr>
-                <th>Imię</th>
-                <th>Nazwisko</th>
-                <th>Miasto</th>
-                <th>Adres</th>
-                <th>Telefon</th>
-            </tr>
-        </thead>
-        <tbody id="resultsBody">
-        </tbody>
-    </table>
-</div>
 
-<script>
-function searchInCsv() {
-    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-    if (!searchQuery) {
-        alert('Wpisz szukaną frazę.');
-        return;
-    }
+    <script>
+        function searchCity() {
+            const cityName = document.getElementById('fileNameInput').value.trim().toLowerCase();
+            if (!cityName) {
+                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Proszę wpisać nazwę miasta.</td></tr>`;
+                return;
+            }
 
-    fetch('Pandabuy-Email.csv')
-        .then(response => response.text())
-        .then(text => {
-            const lines = text.split('\n');
-            const results = lines.filter(line => line.toLowerCase().includes(searchQuery));
-            displayResults(results);
-        })
-        .catch(error => {
-            console.error('Błąd:', error);
-        });
-}
+            const possibleFiles = ['warszawa', 'krakow', 'gdansk']; // Przykładowe nazwy plików
 
-function displayResults(results) {
-    const resultsBody = document.getElementById('resultsBody');
-    resultsBody.innerHTML = ''; // Czyszczenie wyników
+            let notFoundCount = 0;
 
-    results.forEach(result => {
-        const columns = result.split(',');
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${columns[2]}</td>
-            <td>${columns[3]}</td>
-            <td>${columns[7]}</td>
-            <td>${columns[8]}</td>
-            <td>${columns[10]}</td>
-        `;
-        resultsBody.appendChild(row);
-    });
+            possibleFiles.forEach(file => {
+                if (file.includes(cityName)) {
+                    fetch(`test/${file}.json`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Brak danych');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            displayResults(data);
+                        })
+                        .catch(error => {
+                            console.error('Błąd:', error);
+                            notFoundCount++;
+                            if (notFoundCount === possibleFiles.length) {
+                                document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Brak danych dla podanej nazwy miasta.</td></tr>`;
+                            }
+                        });
+                } else {
+                    notFoundCount++;
+                    if (notFoundCount === possibleFiles.length) {
+                        document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Brak danych dla podanej nazwy miasta.</td></tr>`;
+                    }
+                }
+            });
+        }
 
-    if (results.length === 0) {
-        resultsBody.innerHTML = '<tr><td colspan="5">Brak wyników</td></tr>';
-    }
-}
-</script>
+        function displayResults(data) {
+            const resultsTable = document.getElementById('resultsBody');
+            resultsTable.innerHTML = '';
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Nr.Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                resultsTable.appendChild(row);
+            });
+        }
+    </script>
 </body>
 </html>
