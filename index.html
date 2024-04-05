@@ -139,7 +139,7 @@
             const resultsTable = document.getElementById('resultsBody');
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie || 'Brak'}</td><td>${item.Nazwisko || 'Brak'}</td><td>${parsePhoneNumber(item['Nr.Telefonu']) || 'Brak'}</td><td>${item.Miasto || 'Brak'}</td><td>${item.Kraj || 'Brak'}</td><td>${item['Adres Pocztowy'] || 'Brak'}</td>`;
+                row.innerHTML = `<td>${item.Imie || 'Brak'}</td><td>${item.Nazwisko || 'Brak'}</td><td>${item['Nr.Telefonu'] || 'Brak'}</td><td>${item.Miasto || 'Brak'}</td><td>${item.Kraj || 'Brak'}</td><td>${item['Adres Pocztowy'] || 'Brak'}</td>`;
                 resultsTable.appendChild(row);
             });
         }
@@ -156,16 +156,6 @@
         function clearResultsTable() {
             const resultsTable = document.getElementById('resultsBody');
             resultsTable.innerHTML = ''; // Wyczyść zawartość tabeli przed dodaniem nowych danych
-        }
-
-        function parsePhoneNumber(phoneNumber) {
-            const regex = /(\d{3})(\d{3})(\d{3})(\d{3})/;
-            const match = phoneNumber.match(regex);
-            if (match) {
-                return `${match[1]} ${match[2]} ${match[3]} ${match[4]}`;
-            } else {
-                return null;
-            }
         }
     </script>
 </body>
