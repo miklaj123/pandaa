@@ -137,7 +137,13 @@
             const resultsTable = document.getElementById('resultsBody');
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Miasto}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                const imie = item.Imie ? item.Imie : 'Brak';
+                const nazwisko = item.Nazwisko ? item.Nazwisko : 'Brak';
+                const telefon = item['Nr.Telefonu'] ? item['Nr.Telefonu'] : 'Brak';
+                const miasto = item.Miasto ? item.Miasto : 'Brak';
+                const kraj = item.Kraj ? item.Kraj : 'Brak';
+                const adresPocztowy = item['Adres Pocztowy'] ? item['Adres Pocztowy'] : 'Brak';
+                row.innerHTML = `<td>${imie}</td><td>${nazwisko}</td><td>${telefon}</td><td>${miasto}</td><td>${kraj}</td><td>${adresPocztowy}</td>`;
                 resultsTable.appendChild(row);
             });
         }
