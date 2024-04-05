@@ -88,7 +88,7 @@
         function searchCity() {
             const fileName = document.getElementById('fileNameInput').value.trim();
             if (fileName) {
-                fetch(`${fileName}.json`)
+                fetch(`test/${fileName}.json`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Brak danych dla podanej nazwy pliku');
