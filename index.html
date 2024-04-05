@@ -110,38 +110,40 @@
                 'WEST POMERANIAN VOIVODESHIP'
             ];
 
-            let searchCompleted = 0;
+            document.getElementById('resultsBody').innerHTML = ''; // Wyczyść tabelę przed wyszukiwaniem
 
             voivodeships.forEach(voivodeship => {
                 const filePath = `test/${voivodeship}/${cityName}.json`;
                 fetch(filePath)
                     .then(response => {
                         if (!response.ok) {
-                            throw new Error('Brak danych');
+                            throw new Error(`Brak danych dla województwa: ${voivodeship}`);
                         }
                         return response.json();
                     })
                     .then(data => {
-                        displayResults(data);
+                        displayResults(data, voivodeship);
                     })
                     .catch(error => {
-                        searchCompleted++;
-                        if (searchCompleted === voivodeships.length) {
-                            document.getElementById('resultsBody').innerHTML = `<tr><td colspan="8">Brak danych dla podanej nazwy miasta.</td></tr>`;
-                        }
+                        displayNoData(voivodeship); // Wywołanie funkcji informującej o braku danych
                     });
             });
         }
 
-        function displayResults(data) {
+        function displayResults(data, voivodeship) {
             const resultsTable = document.getElementById('resultsBody');
-            resultsTable.innerHTML = '';
-
             data.forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${item.Wojewodztwo}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
+                row.innerHTML = `<td>${item.Imie}</td><td>${item.Nazwisko}</td><td>${item['Numer Telefonu']}</td><td>${item.Ulica}</td><td>${item.Miasto}</td><td>${voivodeship}</td><td>${item.Kraj}</td><td>${item['Adres Pocztowy']}</td>`;
                 resultsTable.appendChild(row);
             });
+        }
+
+        function displayNoData(voivodeship) {
+            const resultsTable = document.getElementById('resultsBody');
+            const row = document.createElement('tr');
+            row.innerHTML = `<td colspan="8">Brak danych dla województwa: ${voivodeship}</td>`;
+            resultsTable.appendChild(row);
         }
     </script>
 </body>
