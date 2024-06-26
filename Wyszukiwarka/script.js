@@ -1,24 +1,3 @@
-// Funkcja otwierająca okno logowania
-function openLogin() {
-    document.getElementById("overlay").style.display = "flex";
-}
-
-// Funkcja logowania użytkownika
-function loginUser() {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // Sprawdzanie poprawności danych logowania
-    if (username === "PandaSearch" && password === "Panda-Leak") {
-        document.getElementById("overlay").style.display = "none"; // Ukrycie okna logowania
-        document.getElementById("mainContent").style.display = "block"; // Wyświetlenie głównego kontenera
-        return false; // Zapobieganie domyślnej akcji formularza
-    } else {
-        alert("Niepoprawna nazwa użytkownika lub hasło.");
-        return false; // Zapobieganie domyślnej akcji formularza
-    }
-}
-
 // Funkcja wyszukiwania miasta
 function searchCity() {
     const cityName = document.getElementById('fileNameInput').value.trim().toLowerCase();

@@ -3,24 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Wyszukiwarka Miasta</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="beta-tag">BETA</div>
-    <!-- Okno logowania -->
-    <div class="overlay" id="overlay">
-        <div class="login-container">
-            <h2>Logowanie</h2>
-            <form onsubmit="return loginUser()">
-                <input type="text" id="username" placeholder="Nazwa użytkownika"><br><br>
-                <input type="password" id="password" placeholder="Hasło" style="width: calc(70% - 16px);"><br><br>
-                <button type="submit">Zaloguj</button>
-            </form>
-        </div>
-    </div>
 
     <!-- Kontener główny z wyszukiwarką -->
-    <div class="container" id="mainContent">
+    <div class="container" id="searchContainer">
         <h1>Wyszukiwarka Miasta</h1>
         <div class="input-container search-bar">
             <input type="text" id="fileNameInput" placeholder="Nazwa miasta" class="placeholder-text">
@@ -58,6 +47,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
