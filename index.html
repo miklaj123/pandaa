@@ -1,25 +1,12 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Logowanie</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Redirecting...</title>
+    <!-- Automatyczne przekierowanie do /login/index.html po 0 sekundach -->
+    <meta http-equiv="refresh" content="0;url=../login/index.html">
 </head>
 <body>
-    <div class="beta-tag">BETA</div>
-
-    <!-- Okno logowania -->
-    <div class="overlay" id="loginOverlay">
-        <div class="login-container">
-            <h2>Logowanie</h2>
-            <form onsubmit="return loginUser()">
-                <input type="text" id="username" placeholder="Nazwa użytkownika"><br><br>
-                <input type="password" id="password" placeholder="Hasło" style="width: calc(70% - 16px);"><br><br>
-                <button type="submit">Zaloguj</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="login.js"></script>
+    <!-- Możesz dodać treść informującą użytkownika o przekierowaniu -->
+    <p>If you are not redirected automatically, follow this <a href="../login/index.html">link to the login page</a>.</p>
 </body>
 </html>
