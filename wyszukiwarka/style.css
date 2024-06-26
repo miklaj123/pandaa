@@ -1,0 +1,212 @@
+/* Resetowanie stylu dla body */
+body {
+    font-family: Arial, sans-serif; /* Ustawienie czcionki dla całej strony */
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Ustawienie tła strony */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Styl kontenera głównego */
+.container {
+    max-width: 80%; /* Maksymalna szerokość kontenera */
+    margin: 20px auto; /* Automatyczne ustawienie marginesów na górze i dołu, a po bokach */
+    padding: 20px; /* Wewnętrzny padding kontenera */
+    background-color: rgba(211, 209, 209, 0.8); /* Kolor tła kontenera z przezroczystością */
+    border-radius: 8px; /* Zaokrąglenie rogów kontenera */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień kontenera */
+    position: relative; /* Pozycja względem rodzica */
+    /* display: none; */ /* Usunięcie display: none; jeśli planujesz pokazywać ten kontener za pomocą JavaScript */
+}
+
+/* Styl dla nagłówka h1 */
+h1 {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    color: #333; /* Kolor tekstu */
+}
+
+/* Styl dla kontenera input */
+.input-container {
+    position: relative; /* Pozycja względem rodzica */
+    margin-bottom: 20px; /* Margines na dole */
+}
+
+/* Styl dla inputów tekstowych i hasłowych */
+input[type="text"],
+input[type="password"] {
+    padding: 8px; /* Wewnętrzny padding */
+    width: calc(70% - 16px); /* Szerokość inputu */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+    border: 1px solid #ccc; /* Grubość i kolor obramowania */
+    font-size: 16px; /* Rozmiar czcionki */
+    color: #333; /* Kolor tekstu */
+}
+
+/* Styl dla placeholdera */
+.placeholder-text {
+    color: #999; /* Kolor placeholdera */
+}
+
+/* Styl dla przycisku wyszukiwania */
+.search-button {
+    padding: 8px 16px; /* Wewnętrzny padding */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+    border: none; /* Brak obramowania */
+    background-color: #4caf50; /* Kolor tła */
+    color: #fff; /* Kolor tekstu */
+    font-size: 16px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor */
+    float: right; /* Prawo-wyrównanie */
+}
+
+/* Styl dla przycisku wyszukiwania po najechaniu */
+.search-button:hover {
+    background-color: #15da1f; /* Kolor tła po najechaniu */
+}
+
+/* Styl dla przycisku przełączania na ciemny motyw */
+.dark-mode-toggle {
+    padding: 8px 16px; /* Wewnętrzny padding */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+    border: none; /* Brak obramowania */
+    background-color: #333; /* Kolor tła */
+    color: #fff; /* Kolor tekstu */
+    font-size: 16px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor */
+    position: absolute; /* Pozycja bezwzględna */
+    top: 10px; /* Odległość od góry */
+    right: 10px; /* Odległość od prawej krawędzi */
+}
+
+/* Styl dla przycisku przełączania na ciemny motyw po najechaniu */
+.dark-mode-toggle:hover {
+    background-color: #555; /* Kolor tła po najechaniu */
+}
+
+/* Styl dla tabeli */
+table {
+    border-collapse: collapse; /* Scalanie obramowania */
+    width: 100%; /* Szerokość tabeli */
+    margin-top: 20px; /* Margines na górze */
+    background-color: #fff; /* Kolor tła */
+}
+
+/* Styl dla nagłówków i komórek tabeli */
+th, td {
+    border: 1px solid black; /* Grubość i kolor obramowania */
+    padding: 10px; /* Wewnętrzny padding */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+    color: #333; /* Kolor tekstu */
+}
+
+/* Styl dla nagłówków tabeli */
+th {
+    background-color: #f2f2f2; /* Kolor tła */
+    font-weight: bold; /* Grubość czcionki */
+}
+
+/* Styl dla dropdowna z aktualizacjami */
+.updates-dropdown {
+    position: absolute; /* Pozycja bezwzględna */
+    top: 10px; /* Odległość od góry */
+    left: 10px; /* Odległość od lewej krawędzi */
+    background-color: #d6211b; /* Kolor tła */
+    padding: 5px 10px; /* Wewnętrzny padding */
+    border-radius: 4px; /* Zaokrąglenie rogów */
+    cursor: pointer; /* Kursor */
+}
+
+/* Styl dla zawartości dropdowna z aktualizacjami */
+.updates-dropdown-content {
+    display: none; /* Ukrycie zawartości */
+    position: absolute; /* Pozycja bezwzględna */
+    background-color: #15beb6; /* Kolor tła */
+    min-width: 160px; /* Minimalna szerokość */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień */
+    z-index: 1; /* Indeks z-index */
+}
+
+/* Pokazywanie zawartości dropdowna po najechaniu */
+.updates-dropdown:hover .updates-dropdown-content {
+    display: block; /* Wyświetlanie zawartości */
+}
+
+/* Styl dla listy w dropdownie */
+.updates-dropdown-content ul {
+    list-style-type: none; /* Brak stylowania listy */
+    padding: 0; /* Brak wewnętrznego paddingu */
+    margin: 0; /* Brak marginesu */
+}
+
+/* Styl dla elementów listy w dropdownie */
+.updates-dropdown-content ul li {
+    padding: 8px 12px; /* Wewnętrzny padding */
+    cursor: pointer; /* Kursor */
+}
+
+/* Styl dla elementów listy w dropdownie po najechaniu */
+.updates-dropdown-content ul li:hover {
+    background-color: #1f969e; /* Kolor tła po najechaniu */
+}
+
+/* Styl dla kontenera w trybie ciemnym */
+.container.dark-mode {
+    background-color: rgba(63, 61, 61, 0.8); /* Kolor tła z przezroczystością */
+    color: #fff; /* Kolor tekstu */
+}
+
+/* Styl dla nagłówków i komórek tabeli w trybie ciemnym */
+.dark-mode th,
+.dark-mode td {
+    background-color: #333; /* Kolor tła */
+    color: #fff; /* Kolor tekstu */
+}
+
+/* Dodatkowe style w trybie ciemnym */
+.dark-mode th {
+    color: #fff; /* Kolor tekstu */
+}
+
+.dark-mode h1 {
+    color: #fff; /* Kolor tekstu */
+}
+
+.dark-mode .placeholder-text {
+    color: #fff; /* Kolor tekstu */
+}
+
+/* Dodatkowe style dla paska wyszukiwania w trybie ciemnym */
+.search-bar.dark-mode {
+    background-color: #333; /* Kolor tła */
+}
+
+.search-bar.dark-mode input[type="text"] {
+    color: #252424; /* Kolor tekstu */
+}
+
+/* Styl dla overlay */
+.overlay {
+    display: flex; /* Wyświetlenie jako flexbox */
+    justify-content: center; /* Wyśrodkowanie zawartości wzdłuż osi poziomej */
+    align-items: center; /* Wyśrodkowanie zawartości wzdłuż osi pionowej */
+    position: fixed; /* Pozycja stała */
+    top: 0; /* Odległość od góry */
+    left: 0; /* Odległość od lewej krawędzi */
+    width: 100%; /* Szerokość */
+    height: 100%; /* Wysokość */
+    background-color: rgba(0, 0, 0, 0.5); /* Kolor tła z przezroczystością */
+    z-index: 1000; /* Indeks z-index */
+}
+
+/* Styl dla kontenera logowania */
+.login-container {
+    background-color: #fff; /* Kolor tła */
+    padding: 20px; /* Wewnętrzny padding */
+    border-radius: 8px; /* Zaokrąglenie rogów */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Cień */
+    max-width: 400px; /* Maksymalna szerokość */
+    width: 100%; /* Szerokość */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}

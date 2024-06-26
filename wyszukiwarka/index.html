@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Wyszukiwarka Miasta</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="beta-tag">BETA</div>
@@ -13,7 +13,7 @@
         <h1>Wyszukiwarka Miasta</h1>
         <div class="input-container search-bar">
             <input type="text" id="fileNameInput" placeholder="Nazwa miasta" class="placeholder-text">
-            <button onclick="searchCity()" class="search-button">Wyszukaj</button>
+            <button type="button" onclick="searchCity()" class="search-button">Wyszukaj</button>
         </div>
         <table id="resultsTable">
             <thead>
@@ -32,7 +32,7 @@
             </tbody>
         </table>
         <!-- Przycisk przełączania motywu -->
-        <button onclick="toggleDarkMode()" class="dark-mode-toggle">Ciemny motyw</button>
+        <button type="button" onclick="toggleDarkMode()" class="dark-mode-toggle">Ciemny motyw</button>
         <!-- Dropdown z aktualizacjami -->
         <div class="updates-dropdown">
             Aktualizacje
@@ -47,6 +47,6 @@
         </div>
     </div>
 
-    <script src="search.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
