@@ -17,3 +17,7 @@ function loginUser() {
         return false; // Zatrzymaj przesyłanie formularza
     }
 }
+
+function registerUser() {
+	window.location.href = "../register/index.html";
+}
