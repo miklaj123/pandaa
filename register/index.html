@@ -10,16 +10,22 @@
     <div class="overlay" id="registerOverlay">
         <div class="register-container">
             <h2>Rejestracja</h2>
-                <input type="text" name="username" placeholder="Nazwa użytkownika" required><br><br>
-                <input type="email" name="email" placeholder="Email" required><br><br>
-                <input type="password" name="password" placeholder="Hasło" required><br><br>
-                <input type="password" name="confirmPassword" placeholder="Potwierdź hasło" required><br><br>
-                <button type="submit">Zarejestruj się</button>
+            <form id="registerForm">
+                <input type="text" id="username" placeholder="Nazwa użytkownika" required><br><br>
+                <input type="email" id="email" placeholder="Email" required><br><br>
+                <input type="password" id="password" placeholder="Hasło" required><br><br>
+                <input type="password" id="confirmPassword" placeholder="Potwierdź hasło" required><br><br>
+                <button type="button" onclick="registerUser()">Zarejestruj się</button>
                 <button type="button" onclick="loginreturn()">Powrót do logowania</button>
             </form>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function loginreturn() {
+            window.location.href = "../login/index.html";
+        }
+    </script>
 </body>
 </html>

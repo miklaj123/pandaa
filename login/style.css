@@ -10,7 +10,6 @@ body {
 
 
 
-##############
 button {
     padding: 10px 20px;
     margin: 10px;
@@ -38,7 +37,7 @@ button[type="button"] {
 button[type="button"]:hover {
     background-color: #0056b3;
 }
-##########
+
 .container {
     max-width: 80%;
     margin: 20px auto;
